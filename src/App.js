@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import "uikit/dist/css/uikit.min.css";
+import "uikit/dist/js/uikit.min.js";
+import Todo from "./Todo";
+import Doing from "./Doing";
+import Done from "./Done";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="MainContainer">
+      <div className="uk-width-1-1@s uk-text-center uk-margin-top">
+        <h1>My Kaban App</h1>
+      </div>
+      <hr />
+
+      <div className="uk-flex uk-flex-center Content">
+        <div className="Section"><Todo /></div>
+        <div className="Section"><Doing /></div>
+        <div className="Section"><Done /></div>
+      </div>
     </div>
   );
 }
